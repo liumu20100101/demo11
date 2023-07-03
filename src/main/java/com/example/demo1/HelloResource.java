@@ -1,0 +1,18 @@
+package com.example.demo1;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+
+@Path("/hello-world")
+public class HelloResource {
+    @GET
+    @Produces("text/plain")
+    public String hello() {
+        return "Hello, World!";
+    }
+
+    public static void main(String[] args) {
+        System.out.println("123");
+    }
+}
