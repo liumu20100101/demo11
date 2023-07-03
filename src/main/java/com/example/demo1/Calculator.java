@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -168,22 +168,22 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        List<String> list = new ArrayList();
-        list.add(0, "1");
-        list.add(1, "2");
-        list.add(2, "2");
-        System.out.println(list.contains("3"));
-        for (String s : list) {
-            System.out.println(s);
-        }
-        list.add(0, "-1");
-        for (String s : list) {
-            System.out.println(s);
-        }
-        list.remove("2");
-        for (String s : list) {
-            System.out.println(s);
-        }
+        Calculator calculator = new Calculator();
+        calculator.setNumber(new BigDecimal(1.20));
+        calculator.setOperator("+");
+        calculator.setNumber(new BigDecimal(2.50));
+        calculator.display();
+        calculator.calculate();
+        calculator.display();
+        calculator.setOperator("*");
+        calculator.setNumber(new BigDecimal(3.30));
+        calculator.display();
+        calculator.calculate();
+        calculator.display();
+        calculator.undo();
+        calculator.display();
+        calculator.redo();
+        calculator.display();
     }
 
 }
